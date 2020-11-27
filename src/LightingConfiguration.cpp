@@ -32,11 +32,11 @@ std::vector<glm::vec3> LightingConfiguration::getPointCluster(glm::vec3 lookingF
     if (lookingFrom != lightPosition) {
         auto currentDirection = glm::vec3 {0, 0, 1};
         auto newDirection = lookingFrom - lightPosition;
-        auto angle = acos(glm::dot(currentDirection, newDirection));
+        auto angle = float(acos(glm::dot(currentDirection, newDirection)));
         auto axis = glm::normalize(glm::cross(currentDirection, newDirection));
         for (auto &v : cluster) {
-            auto a = (cos(angle) * v);
-            auto b = (sin(angle) * glm::cross(axis, v));
+            auto a = float(cos(angle)) * v;
+            auto b = float(sin(angle)) * glm::cross(axis, v);
             auto c = (float) (1.0 - cos(angle)) * glm::dot(axis, v) * axis;
             v = a + b + c;
         }
