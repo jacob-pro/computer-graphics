@@ -35,3 +35,12 @@ git clone https://github.com/microsoft/vcpkg
 Set `-DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake`
 
 Ensure working directory is set so the obj/mtl files can be found.
+
+## Building on MVB Centos7
+
+![C17](c17.png)
+
+This project depends on C++17. However I later realised MVB machines do not support C++17
+
+The `./mvb.sh` script can be used to download and compile GCC 10 (without root) and then run this project
+
