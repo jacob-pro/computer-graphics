@@ -1,0 +1,17 @@
+.DS_Store
+**/build/
+cmake-build-debug/
+cmake-build-release/
+.idea/
+output.ppm
+.vs/
+animation/
+CMakeCache.txt
+CMakeFiles/
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.cmake
+x64/
+CG2020.dir/
+Release/
