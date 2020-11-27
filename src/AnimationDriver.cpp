@@ -13,7 +13,7 @@ void AnimationDriver::renderAndSaveFrame(Model &model) {
 void AnimationDriver::start() {
     Model model;
 
-    // Show the perspective texturing
+    // Show the perspective texturing 0-2s
     std::cout << "Stage 1: Perspective Corrected Textures Cornell Box" << std::endl;
     model = Model(ModelPreset::CornellBoxTextured);
     auto texturedFrames = 120;
@@ -23,7 +23,7 @@ void AnimationDriver::start() {
         model.camera.lookAt(glm::vec3{0,0,0});
     }
 
-    // Show the hackspace textured
+    // Show the hackspace textured 2-4s
     std::cout << "Stage 2: Perspective Corrected Textures Hackspace Logo" << std::endl;
     model = Model(ModelPreset::Hackspace);
     auto hackspaceFrames = 120;
@@ -33,7 +33,7 @@ void AnimationDriver::start() {
         model.camera.lookAt(glm::vec3{-250, 250, 0});
     }
 
-    // Show the soft shadow
+    // Show the soft shadow 4-6.5s
     std::cout << "Stage 3: Soft Shadows in the Cornell Box" << std::endl;
     model = Model(ModelPreset::CornellBoxSoftShadow);
     auto initialPos = model.camera.position;
@@ -48,7 +48,7 @@ void AnimationDriver::start() {
         renderAndSaveFrame(model);
     }
 
-    // Show the lighting
+    // Show the lighting 6.5s-8.5s
     std::cout << "Stage 4: Sphere Shading" << std::endl;
     model = Model(ModelPreset::Sphere);
     model.lighting.shadingMode = ShadingMode::None;
@@ -64,7 +64,7 @@ void AnimationDriver::start() {
         model.camera.lookAt(glm::vec3(0, 1.5, 0));
     }
 
-    // Show the mirror
+    // Show the mirror 8.5s - 11
     std::cout << "Stage 5: Cornell Box With Mirror" << std::endl;
     model = Model(ModelPreset::CornellBoxMirror);
     auto initialPos2 = model.camera.position;
