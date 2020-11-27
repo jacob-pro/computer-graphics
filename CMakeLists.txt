@@ -64,6 +64,7 @@ if (MSVC)
 else ()
     target_compile_options(CG2020
         PUBLIC
+        -std=c++17
         -Wall
         -Wextra
         -Wcast-align

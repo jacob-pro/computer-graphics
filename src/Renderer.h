@@ -5,6 +5,7 @@
 #include <ModelTriangle.h>
 #include "Camera.h"
 #include "LightingConfiguration.h"
+#include <memory>
 
 enum class ConcreteRenderer { Wireframe, Rasterised, Raytraced };
 
