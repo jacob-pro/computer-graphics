@@ -11,7 +11,7 @@
 # For any other changes to the source code, simply recompile.
 
 
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 2.8)
 project(CG2020)
 option(BUILD_TESTS "Enable tests" OFF)
 
