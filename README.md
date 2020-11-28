@@ -2,6 +2,12 @@
 
 Bristol COMS30020_2020 Computer Graphics (Y3), Coursework option
 
+## Usage
+
+Run with arg `--animation` to render and save the video frames (see `animation.sh`)
+
+Otherwise launches a keyboard controllable window: Use args `0-5` to choose which model to load (Textured, Cornell, Soft shadow, Hackspace, Sphere, Mirror) 
+
 ## Features
 
 - OBJ geometry file loading
