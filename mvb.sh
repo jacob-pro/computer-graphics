@@ -8,11 +8,13 @@ set -e
 if [ ! -d $HOME/GCC-10.1.0 ]; then
 
   if [ ! -d gcc-10.1.0 ]; then
+    echo "Downloading GCC"
     wget -O gcc.tar.gz ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-10.1.0/gcc-10.1.0.tar.gz
     tar -xzf gcc.tar.gz
     rm gcc.tar.gz ## Save some space!
   fi
 
+  echo "Compiling GCC"
   cd gcc-10.1.0
   ./contrib/download_prerequisites
   cd ..
