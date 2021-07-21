@@ -2,6 +2,8 @@
 
 Bristol COMS30020_2020 Computer Graphics (Y3), Coursework option
 
+Confirmed mark: 72
+
 ## Usage
 
 Run with arg `--animation` to render and save the video frames (see `animation.sh`)
